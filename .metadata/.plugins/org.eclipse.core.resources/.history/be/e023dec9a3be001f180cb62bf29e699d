@@ -1,0 +1,37 @@
+package com.sathya.SpringBoot.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sathya.SpringBoot.entity.ProductEntity;
+import com.sathya.SpringBoot.model.ProductModel;
+import com.sathya.SpringBoot.repository.ProductRepository;
+
+@Service
+public class ProductService
+{
+	@Autowired
+	ProductRepository productRepository;
+	
+	public void saveproductdetails(ProductModel productModel)
+	{
+		double discountprice;
+		discountprice=productModel.getPrice()*(productModel.getDiscountrate()/100);
+		double offerprice;
+		offerprice=productModel.getPrice()-discountprice;
+		
+		double finalprice;
+		finalprice=productModel.getTaxprice()+offerprice;
+		
+		double stockvalue;
+		stockvalue=productModel.getQuantity()*offerprice+productModel.getTaxprice()/100;
+		
+		ProductEntity productEntity=new ProductEntity();
+		productEntity.setName(productModel.getName());
+		productEntity.setBrand(productModel.getBrand());
+		
+		
+	}
+	
+
+}

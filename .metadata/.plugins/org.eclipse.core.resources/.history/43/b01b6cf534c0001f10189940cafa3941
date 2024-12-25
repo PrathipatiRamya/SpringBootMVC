@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  <div>
+  <form th:action="@{/searchform}" method="post">
+   <label>Enter Id: </label>
+   <input type="number" name="id">
+   <br><br>
+   <button type="submit">Search</button>
+   
+  </form>
+  </div>
+
+</body>
+</html>

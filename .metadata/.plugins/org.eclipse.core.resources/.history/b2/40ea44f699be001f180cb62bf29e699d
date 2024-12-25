@@ -1,0 +1,8 @@
+package com.sathya.SpringBoot.entity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class ProductEntity {
+
+}

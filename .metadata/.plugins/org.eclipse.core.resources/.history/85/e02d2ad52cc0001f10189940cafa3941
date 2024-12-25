@@ -1,0 +1,47 @@
+package com.sathyaEmployee.SpringBoot.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sathyaEmployee.SpringBoot.entity.EmployeeEntity;
+import com.sathyaEmployee.SpringBoot.model.EmployeeModel;
+import com.sathyaEmployee.SpringBoot.repository.EmployeeRepository;
+
+@Service
+public class EmployeeService 
+{
+	@Autowired
+	EmployeeRepository employeeRepository;
+
+	public void saveemployeedetails(EmployeeModel employeeModel)
+	{
+		double allowance;
+		double bonous;
+		double mediaclinsurance;
+		double basicsalary;
+		
+		if(employeeModel.getGroasssalary()<350000)
+		{
+			bonous=10000;
+			allowance=2000;
+			mediaclinsurance=3000;
+			basicsalary=employeeModel.getGroasssalary()-bonous-allowance-mediaclinsurance;
+		}
+		
+		EmployeeEntity employeeEntity=new EmployeeEntity();
+		employeeEntity.setName(employeeModel.getName());
+		employeeEntity.setDepartment(employeeModel.getDepartment());
+		employeeEntity.setAge(employeeModel.getAge());
+		employeeEntity.setGroasssalary(employeeModel.getGroasssalary());
+		employeeEntity.setLocation(employeeModel.getLocation());
+		employeeEntity.setGender(employeeModel.getGender());
+		employeeEntity.setBasicsalary(basicsalary);
+		employeeEntity.setAllowance(allowance);
+		employeeEntity.setBonous(bonous);
+		employeeEntity.setMedicalinsurance(mediaclinsurance);
+		employeeRepository.save(employeeEntity);
+		
+	}
+	
+
+}

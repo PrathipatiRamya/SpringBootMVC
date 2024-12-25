@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Employee</title>
+</head>
+<body>
+<h1>Add Employee</h1>
+<form action="@{/saveemployee}" method="post">
+<label>Name: </label>
+<input type="text" name="name">
+<label>Department</label>
+<input type="text" name="department">
+<label>Salary</label>
+<input type="number" name="salary">
+<label>Location</label>
+<input type="text" name="location">
+<label>Gender</label>
+<input type="radio" name="gender">Male
+<input type="radio" name="gender">Female
+
+<button type="submit">Save Employee</button>
+<button type="reset">Reset</button>
+</form>
+</body>
+</html>

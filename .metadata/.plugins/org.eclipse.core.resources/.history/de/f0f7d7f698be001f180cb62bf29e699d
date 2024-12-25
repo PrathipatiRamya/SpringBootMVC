@@ -1,0 +1,12 @@
+package com.sathya.SpringBoot.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.sathya.SpringBoot.repository.ProductRepository;
+
+public class ProductService
+{
+	@Autowired
+	ProductRepository productRepository;
+
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Add Employee</h1>
+	<form th:action="@{/saveeditemployee?{id}}" th:object="${employee}" method="post">
+	<label>Name: </label>
+	<input type="text" name="name" th:field="*{name}"><br><br>
+	<label>Department</label>
+	<input type="text" name="department" th:field="*{department}"><br><br>
+	<label>Gender</label>
+	<input type="radio" name="gender" value="Male" th:field="*{gender}">Male
+	<input type="radio" name="gender" value="Female" th:field="*{gender}">Female
+	<br><br>
+	<label>Age: </label>
+	<input type="number" name="age" th:field="*{age}">
+	<br><br>
+	<label>Gross Salary</label>
+	<input type="number" name="grosssalary" th:field="*{grosssalary}"><br><br>
+	<label>Location</label>
+	<input type="text" name="location" th:field="*{location}"><br><br>
+	
+	<button type="submit">Save Employee</button>
+</form>
+
+</body>
+</html>

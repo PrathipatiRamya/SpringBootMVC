@@ -1,0 +1,5 @@
+package com.sathya.SpringBoot.entity;
+
+public interface ProductEntity {
+
+}

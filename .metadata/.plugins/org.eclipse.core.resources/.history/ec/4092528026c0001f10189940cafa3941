@@ -1,0 +1,5 @@
+package com.sathyaEmployee.SpringBoot.entity;
+
+public class EmployeeEntity {
+
+}

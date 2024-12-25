@@ -1,0 +1,8 @@
+package com.sathyaEmployee.SpringBoot.entity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class EmployeeEntity {
+
+}

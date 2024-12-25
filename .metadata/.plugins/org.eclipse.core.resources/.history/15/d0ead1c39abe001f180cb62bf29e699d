@@ -1,0 +1,10 @@
+spring.application.name=Example.springboot
+server.port=8085
+
+
+# H2 Database Configuration
+spring.datasource.url=jdbc:h2:mem:testdb   # Use 'mem' for in-memory database or 'file' for file-based
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=ramya
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect

@@ -1,0 +1,5 @@
+package com.sathyaEmployee.SpringBoot.repository;
+
+public interface EmployeeRepository {
+
+}

@@ -1,0 +1,5 @@
+package com.sathyaEmployee.SpringBoot.model;
+
+public class EmployeeModel {
+
+}

@@ -1,0 +1,2 @@
+spring.application.name=Employee.springbootMvc
+server.port=8083

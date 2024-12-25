@@ -1,0 +1,20 @@
+package com.sathya.SpringBoot.model;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor 
+public class ProductModel {
+    @NotBlank(message = "product name cannot be blank")
+	private String name;
+	private String brand;
+	private String madeIn;
+	private double price;
+	private int quantity;
+	private double discountrate;
+	private double taxprice;
+}

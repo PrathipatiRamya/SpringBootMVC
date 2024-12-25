@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <table border="1">
+	   <thead>
+		   <tr>
+		   <th>ID</th>
+		   <th>Name</th>
+		   <th>Age</th>
+		   <th>Gender</th>
+		   <th>Department</th>
+		   <th>Location</th>
+		   <th>Gross Salary</th>
+		   <th>Allowance</th>
+		   <th>Medical Insurance</th>
+		   <th>Bonous</th>
+		   <th>Basic Salary</th>
+		   <th>Montly Salary</th>
+		   <th>Actions</th>
+		   </tr>
+	   </thead>
+	   <tbody>
+	   <tr th:each="employee : ${employees}">
+	   <td th:text="${employee.id}"></td>
+	   <td th:text="${employee.name}"></td>
+	   <td th:text="${employee.age}"></td>
+	   <td th:text="${employee.gender}"></td>
+	   <td th:text="${employee.department}"></td>
+	   <td th:text="${employee.location}"></td>
+	   <td th:text="${employee.grosssalary}"></td>
+	   <td th:text="${employee.allowance}"></td>
+	   <td th:text="${employee.medicalinsurance}"></td>
+	   <td th:text="${employee.bonous}"></td>
+	   <td th:text="${employee.basicsalary}"></td>
+	   <td th:text="${employee.monthlysalary}"></td>
+	   <td>
+	   <a th:href="${'/delete/'+{id}}">Delete</a>
+	   <a th:href="${'/edit/'+{id}}">Edit</a>
+	   </td>
+	   </tbody>
+   
+   </table>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.sathya.SpringBoot.repository;
+
+public class ProductRepository {
+
+}

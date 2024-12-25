@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <table border="1">
+	   <thead>
+		   <tr>
+		   <th>ID</th>
+		   <th>Name</th>
+		   <th>Age</th>
+		   <th>Gender</th>
+		   <th>Department</th>
+		   <th>Location</th>
+		   <th>Gross Salary</th>
+		   <th>Allowance</th>
+		   <th>Medical Insurance</th>
+		   <th>Bonous</th>
+		   <th>Basic Salary</th>
+		   </tr>
+	   </thead>
+	   <tbody>
+	   <tr th:each="employee : ${employees}">
+	   <td th:text="${employee.id}"></td>
+	   </tbody>
+   
+   </table>
+
+</body>
+</html>

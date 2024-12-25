@@ -1,0 +1,12 @@
+package com.sathyaEmployee.SpringBoot.model;
+
+public class EmployeeModel
+{
+
+	private String name;
+	private String department;
+	private double salary;
+	private String location;
+	private String gender;
+	
+}

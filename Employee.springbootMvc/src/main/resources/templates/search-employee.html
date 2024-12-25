@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Search Employee</title>
+</head>
+<body>
+  <div>
+  <h2>Search By Id</h2>
+  <form th:action="@{/searchbyid}" method="post">
+   <label>Enter Id: </label>
+   <input type="number" name="id">
+   <br><br>
+   <button type="submit">Search</button>
+   
+  </form>
+  </div>
+  <div th:if="${employee!=null}">
+	  <p><b>ID :</b> <span th:text="${employee.id}"></span></p>
+	  <p><b>Name :</b> <span th:text="${employee.name}"></span></p>
+	  <p><b>Age :</b> <span th:text="${employee.age}"></span></p>
+	  <p><b>Department :</b> <span th:text="${employee.department}"></span></p>
+	  <p><b>Gender :</b> <span th:text="${employee.gender}"></span></p>
+	 <p><b>Location :</b> <span th:text="${employee.location}"></span></p>
+	 <p><b>Gross Salary:</b> <span th:text="${employee.grosssalary}"></span></p>
+	  <p><b>Allowance :</b> <span th:text="${employee.allowance}"></span></p>
+	  <p><b>Bonous :</b> <span th:text="${employee.bonous}"></span></p>
+	  <p><b>Medical Insurance:</b> <span th:text="${employee.medicalinsurance}"></span></p>
+	  <p><b>Basic Salary:</b> <span th:text="${employee.basicsalary}"></span></p>
+	  <p><b>Montly Salary:</b> <span th:text="${employee.monthlysalary}"></span></p> 
+        
+  </div>
+  <div th:if="${employee==null}">
+  <p>Employee Details are not found by Given ID</p>
+  </div>
+
+</body>
+</html>
